@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analyzer</title>
+</head>
+<body>
+    <h2>AI Sentiment Analyzer</h2>
+
+    <form method="POST">
+        <textarea name="text" rows="4" cols="40" placeholder="Enter text here..."></textarea><br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h3>Result:</h3>
+        <p><strong>Label:</strong> {{ result['label'] }}</p>
+        <p><strong>Confidence:</strong> {{ result['score'] }}</p>
+    {% endif %}
+</body>
+</html>
